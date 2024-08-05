@@ -62,7 +62,7 @@ export default function App() {
       <main className="relative ">
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Nike_React_Tailwand" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/products" element={<PopularProducts />} />
           <Route path="/contact-us" element={<Subscribe email={email} handleEmail={handleEmail} />} />
