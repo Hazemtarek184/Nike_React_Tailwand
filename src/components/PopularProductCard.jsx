@@ -1,8 +1,18 @@
-import { star } from "../assets/icons";
+import { TolpaContextV2 } from "../constants/Provider";
 
-const PopularProductCard = ({ id, title, price, description, image }) => {
+
+const PopularProductCard = ({
+  id,
+  title,
+  price,
+  description,
+  image,
+}) => {
+  
+  const { buyProducts, setBuyProducts } = TolpaContextV2();
+  
   return (
-    <div className="flex group flex-1 flex-col w-full max-sm:w-full max-sm:items-centerc rounded-xl shadow-2xl p-4 hover:shadow-slate-400 cursor-pointer hover:scale-105 duration-200 min-w-2">
+    <div className="">
       <img
         src={image}
         alt={title}
@@ -13,7 +23,7 @@ const PopularProductCard = ({ id, title, price, description, image }) => {
           {title}
         </p>
       </div>
-      <h3 className="s mt-2 text-2xl leading-normal font-semibold font-palanquin dark:text-white text-ellipsis overflow-hidden whitespace-nowrap">
+      <h3 className="mt-2 text-2xl leading-normal font-semibold font-palanquin dark:text-white text-ellipsis overflow-hidden whitespace-nowrap">
         {description}
       </h3>
       <div className="flex justify-between">
@@ -21,7 +31,30 @@ const PopularProductCard = ({ id, title, price, description, image }) => {
           ${price}
         </p>
         <div className="group-hover:flex text-gray-50  w-[60%] rounded-xl content-center justify-around items-center flex-row p-1 mt-2">
-          <button className=" p-1 rounded-xl border dark:border-slate-700 w-full border-slate-300 dark:text-white text-black font-montserrat dark:hover:bg-green-800 hover:bg-green-600 hover:text-white duration-75 ">
+          <button
+            onClick={() => setBuyProducts((prev) => {
+              if (prev.some(item => item.id === id)) {
+                // let index = prev.findIndex((item) => item.id === id);
+                // console.log(`Item with id : ${id} found in ${prev} in index ${index}`);
+                return prev.map(item =>
+                  item.id === id ? {...item, count: item.count+1 } : item
+                )
+              } else {
+                return [
+                  ...prev,
+                  {
+                    id: id,
+                    title: title,
+                    price: price,
+                    description: description,
+                    image: image,
+                    count: 1,
+                  },
+                ];
+              }
+            })}
+            className=" p-1 rounded-xl border dark:border-slate-700 w-full border-slate-300 dark:text-white text-black font-montserrat dark:hover:bg-green-800 hover:bg-green-600 hover:text-white duration-75 "
+          >
             buy
           </button>
         </div>

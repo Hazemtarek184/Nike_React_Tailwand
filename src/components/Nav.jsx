@@ -34,18 +34,18 @@ export const Nav = () => {
                     <img src={headerLogo} alt="Logo"
                     width={130} height={29}/>
                 </a>
-                <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden '>
+                <ul className='flex-1 flex justify-evenly items-center gap-6 max-lg:hidden '>
                     {navLinks.map((item) => 
                         <li key={item.label}>
                             <Link to={item.href}
-                                className='font-montserrat leading-normal text-lg dark:text-white text-black md:ml-8 md:text-base md:my-0 my-7 hover:text-slate-500 dark:hover:text-slate-400 duration-150'>
+                                className='font-montserrat leading-normal text-lg dark:text-white text-black md:ml-8 md:text-base md:my-0 my-6 hover:text-slate-500 dark:hover:text-slate-400 duration-150'>
                                 {item.label}
                             </Link>
                         </li>
                     )}
                 </ul>
                 <section>
-                    <div className='flex items-center duration-200 ease-in-out'>
+                    <div className='flex items-center duration-200 ease-in-out lg:ml-4'>
 
                             <ToggleModes isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
                         <div className='flex  lg:hidden items-center duration-200 ease-in-out'>

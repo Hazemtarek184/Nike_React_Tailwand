@@ -1,7 +1,12 @@
+import { useState } from "react";
 import Button from "../components/Button"
 
 
-function Subscribe({email, handleEmail}) {
+function Subscribe() {
+    const [email, setEmail] = useState();
+    function handleEmail(emailVal) {
+        setEmail(emailVal);
+    }
     return (
         <>
         <section className="max-container flex items-center justify-between max-lg:flex-col gap-10  padding dark:bg-slate-950" id="contact-us">
