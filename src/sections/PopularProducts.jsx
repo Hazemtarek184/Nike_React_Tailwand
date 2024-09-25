@@ -8,6 +8,7 @@ import PopularProductCard from "../components/PopularProductCard";
 function PopularProducts({ setBuyProducts }) {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(true);
 
   
 
@@ -17,11 +18,20 @@ function PopularProducts({ setBuyProducts }) {
       .then((res) => {
         const data = res.data;
         setProducts(data);
+        setLoading(false)
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
       });
   }, []);
+
+  if (loading) {
+    return (
+      <div className="p-20 text-4xl dark:text-white font-palanquin font-semibold">
+        Loading...
+      </div>
+    );
+  }
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
