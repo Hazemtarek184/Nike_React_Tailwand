@@ -8,11 +8,11 @@ import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6
 //     { href: "#contact-us", label: "Contact Us" },
 // ];
 export const navLinks = [
-    { href: "Nike_React_Tailwand", label: "Home" },
-    { href: "about-us", label: "About Us" },
-    { href: "products", label: "Products" },
-    { href: "contact-us", label: "Contact Us" },
-    { href: "shopping-card", label: "Shopping card" },
+    { href: "/Nike_React_Tailwand/", label: "Home" },
+    { href: "/Nike_React_Tailwand/about-us", label: "About Us" },
+    { href: "/Nike_React_Tailwand/products", label: "Products" },
+    { href: "/Nike_React_Tailwand/contact-us", label: "Contact Us" },
+    { href: "/Nike_React_Tailwand/shopping-card", label: "Shopping card" },
 ];
 
 export const shoes = [

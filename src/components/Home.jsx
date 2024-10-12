@@ -1,7 +1,5 @@
 import CustomerReviews from "../sections/CustomerReviews"
 import Hero from "../sections/Hero"
-import PopularProducts from "../sections/PopularProducts"
-import Subscribe from "../sections/Subscribe"
 
 const Home = () => {
     return (

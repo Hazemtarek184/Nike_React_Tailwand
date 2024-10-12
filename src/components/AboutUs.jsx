@@ -5,14 +5,14 @@ import SpecialOffer from "../sections/SpecialOffer";
 const AboutUs = () => {
     return (
         <>
-            <section className="padding dark:bg-slate-950">
-                <SuperQuality/>
+            <section className="padding dark:bg-slate-950  overflow-hidden">
+                <SuperQuality />
             </section>
-            <section className="padding dark:bg-slate-950">
-                <Services/>
+            <section className="padding dark:bg-slate-950 overflow-hidden">
+                <Services />
             </section>
-            <section className="padding dark:bg-slate-950">
-                <SpecialOffer/>
+            <section className="padding dark:bg-slate-950  overflow-hidden">
+                <SpecialOffer />
             </section>
         </>
     )

@@ -10,7 +10,7 @@ function PopularProducts({ setBuyProducts }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
 
-  
+
 
   useEffect(() => {
     axios
@@ -48,7 +48,7 @@ function PopularProducts({ setBuyProducts }) {
   return (
     <section
       id="products"
-      className="max-container max-sm:mt-12 p padding  dark:bg-slate-950 -mt-8"
+      className="max-container overflow-hidden max-sm:mt-12 p padding  dark:bg-slate-950 -mt-8"
     >
       <div className="flex flex-col justify-start gap-5">
         <h2 className="text-4xl font-palanquin font-bold ">
