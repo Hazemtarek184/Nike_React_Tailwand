@@ -1,12 +1,7 @@
-// import Subscribe from "./sections/Subscribe";
-// import PopularProducts from "./sections/PopularProducts";
 import Footer from "./sections/Footer";
 import { Nav } from "./components/Nav";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import Home from "./components/Home";
-// import AboutUs from "./components/AboutUs";
 import { createContext, useState } from "react";
-// import ShoppingCard from "./sections/ShoppingCard";
 import { myContext_Init } from "./constants/Provider";
 import { Suspense, lazy } from "react";
 
@@ -32,7 +27,7 @@ export default function App() {
   console.log(buyProducts)
   return (
     <Router>
-      <main className="relative ">
+      <main className="relative">
         <Nav />
         <Suspense
           fallback={
